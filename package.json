@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "astro": "^5.14.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0"
   }
 }
