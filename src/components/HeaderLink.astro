@@ -2,8 +2,9 @@
 interface Props {
   href: string;
   text: string;
+  active: boolean;
 }
-const { href, text } = Astro.props;
+const { href, text, active } = Astro.props;
 ---
 
-<a href={href}><span class="text-primary">#</span>{text}</a>
+<a class={active ? 'active' : ''} href={href}><span class="text-primary">#</span>{text}</a>
