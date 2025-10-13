@@ -3,12 +3,16 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Skills from '@/components/sections/Skills.astro';
 ---
 
 <Layout>
   <h1>Portfolio</h1>
-  <Hero />
-  <Projects />
+  <div class="flex flex-col gap-28">
+    <Hero />
+    <Projects />
+    <Skills />
+  </div>
   <!-- About Me -->
   <!-- Contacts -->
 </Layout>
