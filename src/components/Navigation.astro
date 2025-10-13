@@ -1,10 +1,14 @@
 ---
+import HeaderLink from './HeaderLink.astro';
 
+const links = [
+  { href: '/', text: 'home' },
+  { href: '/works', text: 'works' },
+  { href: '/about-me', text: 'about me' },
+  { href: '/contacts', text: 'contacts' },
+];
 ---
 
 <div class="nav-links">
-  <a href="/">home</a>
-  <a href="/works">works</a>
-  <a href="/about-me">about me</a>
-  <a href="/contacts">contacts</a>
+  {links.map((e) => <HeaderLink href={e.href} text={e.text} />)}
 </div>

@@ -1,12 +1,19 @@
 @import 'tailwindcss';
 
 :root {
+  --color-primary: #c778dd;
   --color-primary-white: #d9d9d9;
+  --color-primary-gray: #abb2bf;
   --color-primary-background: #282c33;
 }
 
+* {
+  font-family: 'Fira code';
+}
+
 @theme {
-  --color-primary-white: var(--color-primary-white);
+  --color-primary: var(--color-primary);
+  --color-primary-gray: var(--color-primary-gray);
   --color-primary-background: var(--color-primary-background);
 }
 
@@ -30,21 +37,18 @@ nav {
   width: 24px;
   height: 2px;
   margin-bottom: 5px;
-  background-color: var(--color-primary-white);
+  background-color: white;
 }
 
 .hamburger .sm-line {
   display: block;
   width: 15px;
   height: 2px;
-  background-color: var(--color-primary-white);
+  background-color: white;
 }
 
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
   display: none;
   margin: 0;
 }
@@ -52,30 +56,28 @@ nav {
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--color-primary-gray);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  color: white;
 }
 
 @media screen and (min-width: 40rem) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
     position: static;
     width: auto;
-    background: none;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
   }
 
   .hamburger {
