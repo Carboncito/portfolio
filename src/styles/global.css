@@ -1,1 +1,84 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  --color-primary-white: #d9d9d9;
+  --color-primary-background: #282c33;
+}
+
+@theme {
+  --color-primary-white: var(--color-primary-white);
+  --color-primary-background: var(--color-primary-background);
+}
+
+/* nav styles */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger {
+  height: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hamburger .line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: var(--color-primary-white);
+}
+
+.hamburger .sm-line {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: var(--color-primary-white);
+}
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #ff9776;
+}
+
+@media screen and (min-width: 40rem) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
