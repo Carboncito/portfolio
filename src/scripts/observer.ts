@@ -27,11 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Find the link that corresponds to the active section
         // It uses the custom data-section attribute
-        console.log(`.nav-link[data-section="${currentSectionId}"]`);
         const activeLink = document.querySelector(`.nav-link[data-section="${currentSectionId}"]`);
-
-        console.log('Active section:', currentSectionId);
-        console.log('Active link:', activeLink);
 
         // Apply the active class to the correct link
         if (activeLink) {
