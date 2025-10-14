@@ -5,4 +5,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<h2 class="text-3xl font-medium"><span class="text-primary">#</span>{title}</h2>
+<div class="flex items-center">
+  <h2 class="text-3xl font-medium"><span class="text-primary">#</span>{title}</h2>
+  <div class="border-primary mx-4 h-0 w-96 border-t-[0.5px]"></div>
+</div>
