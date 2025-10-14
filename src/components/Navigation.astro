@@ -3,14 +3,14 @@ import HeaderLink from './HeaderLink.astro';
 
 const links = [
   { href: '/', text: 'home' },
-  { href: '/projects', text: 'projects' },
-  { href: '/about-me', text: 'about me' },
-  { href: '/contacts', text: 'contacts' },
+  { href: '#projects', text: 'projects' },
+  { href: '#about-me', text: 'about me' },
+  { href: '#contacts', text: 'contacts' },
 ];
 ---
 
 <div class="nav-links">
-  {links.map((e) => <HeaderLink href={e.href} text={e.text} active={e.href === '/'} />)}
+  {links.map((e) => <HeaderLink href={e.href} text={e.text} />)}
   <select class="text-primary-gray" id="page-language">
     <option value="en">EN</option>
     <option value="es">ES</option>

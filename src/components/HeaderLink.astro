@@ -2,9 +2,11 @@
 interface Props {
   href: string;
   text: string;
-  active: boolean;
 }
-const { href, text, active } = Astro.props;
+const { href, text } = Astro.props;
+const isSection = href.startsWith('#');
 ---
 
-<a class={active ? 'active' : ''} href={href}><span class="text-primary">#</span>{text}</a>
+<a class="nav-link" href={href} data-section={isSection ? href.replace('#', '') : href}
+  ><span class="text-primary">#</span>{text}</a
+>
