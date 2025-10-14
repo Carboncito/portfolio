@@ -1,17 +1,17 @@
 ---
 interface Props {
   title: string;
-  description: string;
+  items: string[];
   class?: string;
 }
-const { title, description, class: customClass } = Astro.props;
+const { title, items, class: customClass } = Astro.props;
 ---
 
 <div class={`border-primary-gray border-[1px] ${customClass}`}>
   <div class="border-primary-gray border-b-[1px] p-2 font-semibold">
     <p>{title}</p>
   </div>
-  <div>
-    <p class="text-primary-gray p-2 text-[16px]">{description}</p>
-  </div>
+  <p class="text-primary-gray flex flex-wrap gap-x-3 p-2 text-[16px]">
+    {items.map((item) => <span>{item}</span>)}
+  </p>
 </div>
