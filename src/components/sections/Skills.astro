@@ -1,11 +1,12 @@
 ---
+import SectionLayout from '@/layouts/SectionLayout.astro';
 import BlockTable from '../BlockTable.astro';
 import SectionTitle from '../SectionTitle.astro';
 
 const languages = ['TypeScript', 'Java', 'JavaScript'];
 ---
 
-<section id="skills" class="section">
+<SectionLayout id="skills">
   <SectionTitle title="skills" />
   <BlockTable class="w-44" title="Languages" description={languages.join(' ')} />
-</section>
+</SectionLayout>
