@@ -7,7 +7,7 @@ interface Props {
 const { title, items, class: customClass } = Astro.props;
 ---
 
-<div class={`border-primary-gray border-[1px] ${customClass}`}>
+<div class={`border-primary-gray border-[1px] xl:w-48 ${customClass}`}>
   <div class="border-primary-gray border-b-[1px] p-2 font-semibold">
     <p>{title}</p>
   </div>

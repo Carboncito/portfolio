@@ -1,11 +1,16 @@
 ---
 interface Props {
   class?: string;
+  cols?: 3 | 5;
 }
-const { class: dotsClass = '' } = Astro.props;
-const dots = Array.from({ length: 25 });
+const { class: dotsClass = '', cols = 5 } = Astro.props;
+const dots = Array.from({ length: Math.pow(cols, 2) });
+const defaultClasses = {
+  3: 'grid-rows-3 grid-cols-3',
+  5: 'grid-rows-5 grid-cols-5',
+};
 ---
 
-<div class={`grid-rows-5h-12 grid max-w-fit grid-cols-5 gap-4 ${dotsClass}`}>
+<div class={`h-12 grid max-w-fit gap-4 ${defaultClasses[cols]} ${dotsClass}`}>
   {dots.map(() => <div class="bg-primary-gray h-1 w-1 rounded-full" />)}
 </div>

@@ -4,7 +4,7 @@ import BlockTable from '../BlockTable.astro';
 import SectionTitle from '../SectionTitle.astro';
 
 const TITLE = 'skills';
-const languages = ['JavaScript', 'Java', 'TypeScript', 'Kotlin'];
+const languages = ['JavaScript', 'TypeScript', 'Java', 'Kotlin'];
 const mobile = ['React Native', 'Expo', 'iOS/Android'];
 const frontend = [
   'React',
@@ -19,20 +19,14 @@ const frontend = [
   'Jest',
 ];
 const backend = ['Node.js', 'Express', 'NestJS', 'MySQL', 'PostgreSQL', 'MongoDB', 'GraphQL'];
-const tools = ['Git', 'Figma', 'Firebase', 'AWS', 'Docker'];
 ---
 
 <SectionLayout id={TITLE}>
   <SectionTitle title={TITLE} />
-  <div class="mx-auto flex max-w-6xl flex-col items-start gap-4 sm:flex-row">
-    <div class="flex w-full flex-col gap-4 sm:w-1/3">
+  <div class="mx-auto mt-11 max-w-6xl">
+    <div class="grid gap-6 sm:grid-cols-3 sm:justify-items-center xl:grid-cols-4">
       <BlockTable title="Languages" items={languages} />
-    </div>
-    <div class="flex w-full flex-col gap-4 sm:w-1/3">
       <BlockTable title="Mobile" items={mobile} />
-      <BlockTable title="Tools" items={tools} />
-    </div>
-    <div class="flex w-full flex-col gap-4 sm:w-1/3">
       <BlockTable title="Frontend" items={frontend} />
       <BlockTable title="Backend" items={backend} />
     </div>
