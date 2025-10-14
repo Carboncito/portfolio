@@ -24,15 +24,15 @@ const tools = ['Git', 'Figma', 'Firebase', 'AWS', 'Docker'];
 
 <SectionLayout id={TITLE}>
   <SectionTitle title={TITLE} />
-  <div class="flex w-[584px] items-start gap-4">
-    <div class="flex w-1/3 flex-col gap-4">
+  <div class="mx-auto flex max-w-6xl flex-col items-start gap-4 sm:flex-row">
+    <div class="flex w-full flex-col gap-4 sm:w-1/3">
       <BlockTable title="Languages" items={languages} />
     </div>
-    <div class="flex w-1/3 flex-col gap-4">
+    <div class="flex w-full flex-col gap-4 sm:w-1/3">
       <BlockTable title="Mobile" items={mobile} />
       <BlockTable title="Tools" items={tools} />
     </div>
-    <div class="flex w-1/3 flex-col gap-4">
+    <div class="flex w-full flex-col gap-4 sm:w-1/3">
       <BlockTable title="Frontend" items={frontend} />
       <BlockTable title="Backend" items={backend} />
     </div>
