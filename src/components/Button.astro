@@ -1,0 +1,18 @@
+---
+type Variant = 'primary' | 'secondary';
+interface Props {
+  variant?: Variant;
+}
+const { variant = 'primary' } = Astro.props;
+
+const defaultClasses = 'mt-6 border-[1px] px-4 py-2 font-medium cursor-pointer';
+
+const baseClasses: Record<Variant, string> = {
+  primary: 'hover:bg-primary/20 border-primary',
+  secondary: 'hover:bg-primary-gray/20 border-primary-gray text-primary-gray',
+};
+---
+
+<button role="button" class={`${defaultClasses} ${baseClasses[variant]}`}>
+  <slot />
+</button>
