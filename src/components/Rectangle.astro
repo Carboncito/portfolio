@@ -1,0 +1,15 @@
+---
+type Size = 'small' | 'medium' | 'large';
+interface Props {
+  class?: string;
+  size?: Size;
+}
+const { class: dotsClass = '', size = 'medium' } = Astro.props;
+const defaultSizes: Record<Size, string> = {
+  small: 'w-14 h-14',
+  medium: 'w-20 h-20',
+  large: 'w-40 h-40',
+};
+---
+
+<div class={`border-primary-gray border-[1px] ${defaultSizes[size]} ${dotsClass}`}></div>
