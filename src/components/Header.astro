@@ -4,7 +4,9 @@ import Navigation from './Navigation.astro';
 ---
 
 <header>
-  <nav class="flex flex-col justify-between pb-2 sm:flex-row">
+  <nav
+    class="fixed top-0 right-0 left-0 z-10 flex flex-col justify-between px-4 pt-4 pb-2 backdrop-blur-md sm:flex-row md:px-20 lg:px-44"
+  >
     <p class="hidden font-bold sm:block">Carboncito</p>
     <Hamburger />
     <Navigation />
