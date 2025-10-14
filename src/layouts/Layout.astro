@@ -19,7 +19,9 @@ const { pageTitle } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="bg-primary-background flex flex-col px-4 pt-4 text-white md:px-20 lg:px-44">
+  <body
+    class="bg-primary-background flex flex-col overflow-x-hidden px-4 pt-4 text-white md:px-20 lg:px-44"
+  >
     <Header />
     <h1>{pageTitle}</h1>
     <div>
