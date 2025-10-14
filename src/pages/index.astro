@@ -8,7 +8,7 @@ import '../styles/global.css';
 import Skills from '@/components/sections/Skills.astro';
 ---
 
-<Layout>
+<Layout pageTitle="Jonathan's Portfolio">
   <div class="flex flex-col gap-28 overflow-y-hidden">
     <Hero />
     <Projects />
@@ -17,3 +17,7 @@ import Skills from '@/components/sections/Skills.astro';
     <Contacts />
   </div>
 </Layout>
+
+<script>
+  import '../scripts/observer';
+</script>
