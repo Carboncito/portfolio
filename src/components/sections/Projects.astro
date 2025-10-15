@@ -1,8 +1,29 @@
 ---
 import SectionLayout from '@/layouts/SectionLayout.astro';
 import SectionTitle from '../SectionTitle.astro';
+import ProyectCard from '../ProyectCard.astro';
 ---
 
 <SectionLayout id="projects">
   <SectionTitle title="projects" />
+  <div class="mt-12 grid justify-items-center gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <ProyectCard
+      name="Restaurant mobile app"
+      shortDesc="Multiple restaurants with shopping cart, payment gateway, menu, and order tracking."
+      img="/src/assets/images/restaurant-app.png"
+      tools={['React native', 'Redux', 'AWS']}
+    />
+    <ProyectCard
+      name="Wallet mobile app"
+      shortDesc="To receive, transfer, consult and withdraw money."
+      img="/src/assets/images/bank-app.png"
+      tools={['React native', 'React', 'AWS']}
+    />
+    <ProyectCard
+      name="SNS mobile app"
+      shortDesc="Mobile social platform with mood posts, multimedia content, news, and push notifications."
+      img="/src/assets/images/social-network-app.png"
+      tools={['React native', 'React', 'Node.js']}
+    />
+  </div>
 </SectionLayout>
