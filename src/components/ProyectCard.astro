@@ -6,12 +6,13 @@ interface Props {
   shortDesc: string;
   img: string;
   tools: string[];
+  class?: string;
 }
-const { tools, img, shortDesc, name } = Astro.props;
+const { tools, img, shortDesc, name, class: customClass = '' } = Astro.props;
 ---
 
 <div
-  class="border-primary-gray group overflow-hidden rounded-t-lg border-2 transition-all duration-300"
+  class={`border-primary-gray group overflow-hidden rounded-t-lg border-2 transition-all duration-300 ${customClass}`}
 >
   <div class="relative aspect-video overflow-hidden">
     <Image
