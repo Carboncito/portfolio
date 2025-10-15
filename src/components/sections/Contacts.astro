@@ -1,8 +1,31 @@
 ---
 import SectionLayout from '@/layouts/SectionLayout.astro';
 import SectionTitle from '../SectionTitle.astro';
+import MailIcon from '../../assets/svg/mail.svg';
+import LinkedinIcon from '../../assets/svg/linkedin.svg';
+
+const email = 'jonathan.hdz849@gmail.com';
 ---
 
-<SectionLayout id="contacts">
+<SectionLayout id="contacts" class="mb-12">
   <SectionTitle title="contacts" />
+  <div class="flex justify-between">
+    <p class="text-primary-gray leading-6 tracking-normal sm:w-[31rem]">
+      Do you have a project in mind? I'm always open to discussing new opportunities, creative
+      ideas, or being part of your vision.
+    </p>
+    <div class="border-primary-gray w-fit border-[1px] p-4">
+      <p class="pb-4">Message me here</p>
+      <div class="text-primary-gray flex flex-col gap-2 text-[16px]">
+        <div class="flex items-center gap-x-1">
+          <LinkedinIcon width={24} height={24} class="fill-primary-gray" />
+          <a href="https://www.linkedin.com/in/jonathanhdz849/">jonathanhdz849</a>
+        </div>
+        <div class="flex items-center gap-x-1">
+          <MailIcon width={24} height={24} class="fill-primary-gray" />
+          <a href={`mailto:${email}`}>{email}</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </SectionLayout>
