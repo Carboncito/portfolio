@@ -2,30 +2,54 @@
 import SectionLayout from '@/layouts/SectionLayout.astro';
 import SectionTitle from '../SectionTitle.astro';
 import MailIcon from '../../assets/svg/mail.svg';
-import LinkedinIcon from '../../assets/svg/linkedin.svg';
+import LinkedinIcon from '../../assets/svg/linkedin-2.svg';
+import GithubIcon from '../../assets/svg/github.svg';
 
 const email = 'jonathan.hdz849@gmail.com';
+const githubUserName = 'Carboncito';
+const linkedinUserName = 'jonathanhdz849';
+const socialLinks = [
+  {
+    icon: GithubIcon,
+    label: 'Github',
+    href: `https://github.com/${githubUserName}`,
+    userName: `@${githubUserName}`,
+  },
+  {
+    icon: LinkedinIcon,
+    label: 'Linkedin',
+    href: `https://www.linkedin.com/in/${linkedinUserName}/`,
+    userName: `/${linkedinUserName}`,
+  },
+  {
+    icon: MailIcon,
+    label: 'Email',
+    href: `mailto:${email}`,
+    userName: email,
+  },
+];
 ---
 
 <SectionLayout id="contacts" class="mb-12">
   <SectionTitle title="contacts" />
-  <div class="flex justify-between">
-    <p class="text-primary-gray leading-6 tracking-normal sm:w-[31rem]">
-      Do you have a project in mind? I'm always open to discussing new opportunities, creative
-      ideas, or being part of your vision.
-    </p>
-    <div class="border-primary-gray w-fit border-[1px] p-4">
-      <p class="pb-4">Message me here</p>
-      <div class="text-primary-gray flex flex-col gap-2 text-[16px]">
-        <div class="flex items-center gap-x-1">
-          <LinkedinIcon width={24} height={24} class="fill-primary-gray" />
-          <a href="https://www.linkedin.com/in/jonathanhdz849/">jonathanhdz849</a>
+  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+    {
+      socialLinks.map(({ icon: Icon, label, href, userName }) => (
+        <div class="border-primary-gray/20 border-[1px] px-2 py-6">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center space-y-3 text-center"
+          >
+            <div class="group-hover:bg-primary/20 bg-primary-gray/20 rounded-lg p-3">
+              <Icon width="24" height="24" class="fill-primary-gray" />
+            </div>
+            <h4 class="text-sm">{label}</h4>
+            <p class="text-xs break-all">{userName}</p>
+          </a>
         </div>
-        <div class="flex items-center gap-x-1">
-          <MailIcon width={24} height={24} class="fill-primary-gray" />
-          <a href={`mailto:${email}`}>{email}</a>
-        </div>
-      </div>
-    </div>
+      ))
+    }
   </div>
 </SectionLayout>
