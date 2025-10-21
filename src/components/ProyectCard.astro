@@ -12,7 +12,7 @@ const { tools, img, shortDesc, name, class: customClass = '' } = Astro.props;
 ---
 
 <div
-  class={`border-primary-gray group overflow-hidden rounded-t-lg border-2 transition-all duration-300 ${customClass}`}
+  class={`border-primary-gray/20 group overflow-hidden rounded-t-lg border-2 transition-all duration-300 shadow-lg/20 shadow-primary-gray/50 ${customClass}`}
 >
   <div class="relative aspect-video overflow-hidden">
     <Image
@@ -23,7 +23,7 @@ const { tools, img, shortDesc, name, class: customClass = '' } = Astro.props;
       class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
     />
   </div>
-  <div class="border-primary-gray border-t-2 border-b-2 p-2">
+  <div class="border-primary-gray/20 border-t-2 border-b-2 p-2">
     <p class="text-primary-gray flex flex-wrap gap-x-3 text-[16px]">
       {tools.map((tool) => <span>{tool}</span>)}
     </p>
