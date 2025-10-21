@@ -14,6 +14,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-primary: var(--color-primary);
   --color-primary-gray: var(--color-primary-gray);
