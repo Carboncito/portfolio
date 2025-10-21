@@ -7,6 +7,6 @@ const { href, text } = Astro.props;
 const isSection = href.startsWith('#');
 ---
 
-<a class="nav-link" href={href} data-section={isSection ? href.replace('#', '') : href}
+<a href={href} data-section={isSection ? href.replace('#', '') : href}
   ><span class="text-primary">#</span>{text}</a
 >
