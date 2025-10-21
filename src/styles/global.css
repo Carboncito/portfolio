@@ -63,7 +63,6 @@ html {
   color: var(--color-primary-gray);
 }
 
-.nav-links .active-link,
 .nav-links a:hover,
 .nav-links a:focus {
   color: white;
