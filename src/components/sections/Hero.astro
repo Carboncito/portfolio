@@ -1,22 +1,26 @@
 ---
 import Button from '../Button.astro';
 import ChevronDown from '../../assets/svg/chevron_down.svg';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="home" class="section flex min-h-screen items-center justify-center">
   <div class="flex flex-col text-center sm:w-[34rem]">
     <h1 class="text-3xl font-semibold">
-      Hi, I'm Jonathan a <span class="text-primary">mobile</span> and <span class="text-primary"
-        >front-end developer</span
-      >
+      {t('home_title_p1')}<span class="text-primary">{t('home_title_skill1')}</span>{
+        t('home_title_p2')
+      }<span class="text-primary">{t('home_title_skill2')}</span>
     </h1>
     <p class="text-primary-gray mt-4 text-lg">
-      I create beautiful and functional digital experiences that engage users and drive results.
+      {t('home_intro_paragraph')}
     </p>
-    <Button class="hidden self-center sm:block">Contact me!!</Button>
+    <Button class="hidden self-center sm:block">{t('home_contact_btn')}</Button>
   </div>
   <div class="absolute bottom-8 animate-bounce">
-    <a href="#projects" aria-label="Go to projects">
+    <a href="#projects" aria-label={t('home_a11y_label_projects')}>
       <ChevronDown class="h-6 w-6" />
     </a>
   </div>
