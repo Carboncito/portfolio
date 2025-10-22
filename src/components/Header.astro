@@ -1,13 +1,17 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header>
   <nav
     class="fixed top-0 right-0 left-0 z-10 flex flex-col justify-between px-4 pt-4 pb-2 backdrop-blur-md sm:flex-row md:px-20 lg:px-44"
   >
-    <p class="hidden font-bold sm:block">Carboncito</p>
+    <p class="hidden font-bold sm:block">{t('nick_name')}</p>
     <Hamburger />
     <Navigation />
   </nav>
