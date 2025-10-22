@@ -1,18 +1,19 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import HeaderLink from './HeaderLink.astro';
+import Select from './Select.astro';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const links = [
-  { href: '#home', text: 'home' },
-  { href: '#projects', text: 'projects' },
-  { href: '#about-me', text: 'about me' },
-  { href: '#contacts', text: 'contacts' },
+  { href: '#home', text: t('nav_home') },
+  { href: '#projects', text: t('nav_projects') },
+  { href: '#about-me', text: t('nav_about_me') },
+  { href: '#contacts', text: t('nav_contacts') },
 ];
 ---
 
 <div class="nav-links">
   {links.map((e) => <HeaderLink href={e.href} text={e.text} />)}
-  <select class="text-primary-gray" id="page-language">
-    <option value="en">EN</option>
-    <option value="es">ES</option>
-  </select>
+  <Select />
 </div>

@@ -2,10 +2,10 @@ import en from './en.json';
 import es from './es.json';
 
 export const languages = {
-  es: 'Español',
   en: 'English',
+  es: 'Español',
 };
-export const defaultLang: keyof typeof languages = 'en';
+export const defaultLang = 'en';
 export const ui = {
   en,
   es,

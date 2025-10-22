@@ -1,5 +1,9 @@
 {
-  "home_title_p1": "Hi, I'm Jonathan a ",
+  "nav_home": "home",
+  "nav_projects": "projects",
+  "nav_about_me": "about me",
+  "nav_contacts": "contacts",
+  "home_title_p1": "Hey, I'm Jonathan a ",
   "home_title_skill1": "mobile",
   "home_title_p2": " and ",
   "home_title_skill2": "front-end developer",
