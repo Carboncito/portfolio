@@ -1,8 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="border-primary-gray/20 border-t-[1px] px-4 py-8 md:px-20 lg:px-44">
-  <p class="font-normal">Mobile & front-end developer</p>
-  <p class="text-primary-gray mt-12 text-center text-xs">© Copyright 2025. Made by Jonathan</p>
+  <p class="font-normal">{t('footer_text')}</p>
+  <p class="text-primary-gray mt-12 text-center text-xs">{t('footer_coopyrigth')}</p>
 </footer>

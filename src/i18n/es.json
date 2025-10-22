@@ -1,9 +1,30 @@
 {
+  "nav_home": "inicio",
+  "nav_projects": "proyectos",
+  "nav_about_me": "sobre mí",
+  "nav_contacts": "contacto",
   "home_title_p1": "Desarrollador ",
   "home_title_skill1": "móvil",
   "home_title_p2": " y ",
   "home_title_skill2": "frontend",
   "home_intro_paragraph": "Creo experiencias digitales funcionales que atraen a los usuarios y generan resultados.",
   "home_contact_btn": "¡Contáctame!",
-  "home_a11y_label_projects": "Ir a proyectos"
+  "home_a11y_label_projects": "Ir a proyectos",
+
+  "project_restaurant_name": "Aplicación móvil de restaurantes",
+  "project_wallet_name": "Aplicación móvil de Billetera (Wallet)",
+  "project_sns_name": "Aplicación móvil de Red Social (SNS)",
+
+  "project_restaurant_desc": "Múltiples restaurantes con carrito de compras, pasarela de pago, menú y seguimiento de pedidos.",
+  "project_wallet_desc": "Para recibir, transferir, consultar y retirar dinero.",
+  "project_sns_desc": "Plataforma social móvil con publicaciones de estado de ánimo, contenido multimedia, noticias y notificaciones.",
+
+  "about_me_greeting": "¡Hola!",
+  "about_me_paragraph_1": "Soy ingeniero de software con 5 años de experiencia, enfocado principalmente en tecnologías JavaScript. A lo largo de los años, he tenido la oportunidad de trabajar con React Native para aplicaciones móviles, React.js para desarrollo web, y Node.js para backend.",
+  "about_me_paragraph_2": "Estoy deseando asumir nuevos desafíos que me permitan seguir creciendo, colaborar con equipos y continuar mejorando mis habilidades tanto en desarrollo front-end como back-end.",
+
+  "label_email": "correo electrónico",
+
+  "footer_text": "Desarrollador Mobile & front-end",
+  "footer_coopyrigth": "© Copyright 2025. Echo por Jonathan"
 }

@@ -1,4 +1,6 @@
 {
+  "email": "jonathan.hdz849@gmail.com",
+
   "nav_home": "home",
   "nav_projects": "projects",
   "nav_about_me": "about me",
@@ -9,5 +11,22 @@
   "home_title_skill2": "front-end developer",
   "home_intro_paragraph": "I create beautiful and functional digital experiences that engage users and drive results.",
   "home_contact_btn": "Contact me!!",
-  "home_a11y_label_projects": "Go to projects"
+  "home_a11y_label_projects": "Go to projects",
+
+  "project_restaurant_name": "Restaurant mobile app",
+  "project_wallet_name": "Wallet mobile app",
+  "project_sns_name": "SNS mobile app",
+
+  "project_restaurant_desc": "Multiple restaurants with shopping cart, payment gateway, menu, and order tracking.",
+  "project_wallet_desc": "To receive, transfer, consult and withdraw money.",
+  "project_sns_desc": "Mobile social platform with mood posts, multimedia content, news, and push notifications.",
+
+  "about_me_greeting": "Hey there!",
+  "about_me_paragraph_1": "I'm a software engineer with 5 years of experience, mainly focused on JavaScript technologies. Over the years, I've had the opportunity to work with React Native for mobile applications, React.js for web development, and Node.js for backend.",
+  "about_me_paragraph_2": "I'm eager to take on new challenges that allow me to grow further, collaborate with teams, and continue to improve my skills in both front-end and back-end development.",
+
+  "label_email": "email",
+
+  "footer_text": "Mobile & front-end developer",
+  "footer_coopyrigth": "© Copyright 2025. Made by Jonathan"
 }

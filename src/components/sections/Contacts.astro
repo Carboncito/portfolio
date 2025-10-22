@@ -4,8 +4,10 @@ import SectionTitle from '../SectionTitle.astro';
 import MailIcon from '../../assets/svg/mail.svg';
 import LinkedinIcon from '../../assets/svg/linkedin-2.svg';
 import GithubIcon from '../../assets/svg/github.svg';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
-const email = 'jonathan.hdz849@gmail.com';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const githubUserName = 'Carboncito';
 const linkedinUserName = 'jonathanhdz849';
 const socialLinks = [
@@ -23,15 +25,15 @@ const socialLinks = [
   },
   {
     icon: MailIcon,
-    label: 'Email',
-    href: `mailto:${email}`,
-    userName: email,
+    label: t('label_email'),
+    href: `mailto:${t('email')}`,
+    userName: t('email'),
   },
 ];
 ---
 
 <SectionLayout id="contacts" class="mb-12">
-  <SectionTitle title="contacts" />
+  <SectionTitle title={t('nav_contacts')} />
   <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
     {
       socialLinks.map(({ icon: Icon, label, href, userName }) => (
@@ -45,7 +47,7 @@ const socialLinks = [
             <div class="group-hover:bg-primary/20 bg-primary-gray/20 rounded-lg p-3">
               <Icon width="24" height="24" class="fill-primary-gray" />
             </div>
-            <h4 class="text-sm">{label}</h4>
+            <h4 class="text-sm capitalize">{label}</h4>
             <p class="text-xs break-all">{userName}</p>
           </a>
         </div>

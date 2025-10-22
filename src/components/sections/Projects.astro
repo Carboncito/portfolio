@@ -2,26 +2,30 @@
 import SectionLayout from '@/layouts/SectionLayout.astro';
 import SectionTitle from '../SectionTitle.astro';
 import ProyectCard from '../ProyectCard.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <SectionLayout id="projects">
-  <SectionTitle title="projects" />
+  <SectionTitle title={t('nav_projects')} />
   <div class="grid justify-items-center gap-4 md:grid-cols-2 xl:grid-cols-3">
     <ProyectCard
-      name="Restaurant mobile app"
-      shortDesc="Multiple restaurants with shopping cart, payment gateway, menu, and order tracking."
+      name={t('project_restaurant_name')}
+      shortDesc={t('project_restaurant_desc')}
       img="/src/assets/images/restaurant-app.png"
       tools={['React native', 'Redux', 'AWS']}
     />
     <ProyectCard
-      name="Wallet mobile app"
-      shortDesc="To receive, transfer, consult and withdraw money."
+      name={t('project_wallet_name')}
+      shortDesc={t('project_wallet_desc')}
       img="/src/assets/images/bank-app.png"
       tools={['React native', 'React', 'AWS']}
     />
     <ProyectCard
-      name="SNS mobile app"
-      shortDesc="Mobile social platform with mood posts, multimedia content, news, and push notifications."
+      name={t('project_sns_name')}
+      shortDesc={t('project_sns_desc')}
       img="/src/assets/images/social-network-app.png"
       tools={['React native', 'React', 'Node.js']}
       class="sm:col-span-2 xl:col-span-1"
