@@ -1,5 +1,7 @@
 {
   "email": "jonathan.hdz849@gmail.com",
+  "label_view_all": "View all ~~>",
+  "label_email": "email",
 
   "nav_home": "home",
   "nav_projects": "projects",
@@ -24,8 +26,6 @@
   "about_me_greeting": "Hey there!",
   "about_me_paragraph_1": "I'm a software engineer with 5 years of experience, mainly focused on JavaScript technologies. Over the years, I've had the opportunity to work with React Native for mobile applications, React.js for web development, and Node.js for backend.",
   "about_me_paragraph_2": "I'm eager to take on new challenges that allow me to grow further, collaborate with teams, and continue to improve my skills in both front-end and back-end development.",
-
-  "label_email": "email",
 
   "footer_text": "Mobile & front-end developer",
   "footer_coopyrigth": "© Copyright 2025. Made by Jonathan"

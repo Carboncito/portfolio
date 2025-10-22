@@ -1,4 +1,7 @@
 {
+  "label_view_all": "Ver todos ~~>",
+  "label_email": "correo electrónico",
+
   "nav_home": "inicio",
   "nav_projects": "proyectos",
   "nav_about_me": "sobre mí",
@@ -22,8 +25,6 @@
   "about_me_greeting": "¡Hola!",
   "about_me_paragraph_1": "Soy ingeniero de software con 5 años de experiencia, enfocado principalmente en tecnologías JavaScript. A lo largo de los años, he tenido la oportunidad de trabajar con React Native para aplicaciones móviles, React.js para desarrollo web, y Node.js para backend.",
   "about_me_paragraph_2": "Estoy deseando asumir nuevos desafíos que me permitan seguir creciendo, colaborar con equipos y continuar mejorando mis habilidades tanto en desarrollo front-end como back-end.",
-
-  "label_email": "correo electrónico",
 
   "footer_text": "Desarrollador Mobile & front-end",
   "footer_coopyrigth": "© Copyright 2025. Echo por Jonathan"

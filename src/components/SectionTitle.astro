@@ -1,11 +1,24 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
 interface Props {
   title: string;
+  href?: string;
 }
-const { title } = Astro.props;
+
+const { title, href } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="mb-12 flex items-center">
   <h2 class="text-3xl font-medium"><span class="text-primary">#</span>{title}</h2>
   <div class="border-primary mx-4 h-0 w-96 border-t-[0.5px]"></div>
+  {
+    href && (
+      <div class="flex flex-1 justify-end">
+        <a href={href}>{t('label_view_all')}</a>
+      </div>
+    )
+  }
 </div>
